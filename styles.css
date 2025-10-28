@@ -1,0 +1,41 @@
+/* Simple responsive CSS */
+:root{
+  --maxw:1100px;
+  --accent: #0066cc;
+  --bg:#f7f8fa;
+  --muted:#666;
+}
+*{box-sizing:border-box}
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0; color:#111; background:var(--bg); line-height:1.45;
+}
+.container{max-width:var(--maxw); margin:0 auto; padding:2rem;}
+.site-header{background:white; box-shadow:0 1px 0 rgba(0,0,0,.06); position:sticky; top:0; z-index:50;}
+.site-header .container{display:flex; gap:1rem; align-items:center; justify-content:space-between; padding:1rem 2rem;}
+.brand{font-weight:700; text-decoration:none; color:var(--accent); font-size:1.1rem;}
+#nav{display:flex; gap:1rem;}
+#nav a{color:#111; text-decoration:none; padding:.4rem .6rem; border-radius:6px;}
+#nav a:hover{background:rgba(0,0,0,.04);}
+#nav-toggle{display:none; background:transparent; border:0; font-size:1.25rem;}
+
+.hero{padding:5rem 0; background:linear-gradient(180deg, white 0%, #eef6ff 100%);}
+.hero h1{margin:0 0 .5rem; font-size:2.25rem;}
+.cta{display:inline-block; margin-top:1rem; padding:.6rem 1rem; background:var(--accent); color:white; text-decoration:none; border-radius:6px;}
+
+.card{background:white; padding:1.5rem; border-radius:10px; box-shadow:0 6px 18px rgba(20,20,50,.06);}
+.skills{display:flex; gap:.5rem; list-style:none; padding:0; margin:.5rem 0 0;}
+.skills li{background:#eef3ff; padding:.3rem .6rem; border-radius:999px; font-size:.9rem;}
+
+.grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1rem;}
+.tile{background:white; padding:1rem; border-radius:8px; box-shadow:0 3px 10px rgba(20,20,50,.04);}
+
+.site-footer{padding:2rem 0; text-align:center; color:var(--muted);}
+
+/* Responsive */
+@media (max-width:800px){
+  .grid{grid-template-columns:1fr;}
+  #nav{position:absolute; right:1rem; top:64px; flex-direction:column; background:white; padding:.6rem; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,.08); display:none;}
+  #nav.show{display:flex;}
+  #nav-toggle{display:inline-block;}
+}
