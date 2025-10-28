@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abbas — My Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="A simple personal website template.">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#">Abbas</a>
+      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Hello — I'm Abbas</h1>
+        <p>A simple, fast website template you can edit in minutes.</p>
+        <a class="cta" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about" class="container card">
+      <h2>About</h2>
+      <p>I am known for my kindness and willingness to help others, always bringing a positive touch to every situation.</p>
+      <ul class="skills">
+        <li>Web design</li>
+        <li>Development</li>
+        <li>Photography</li>
+      </ul>
+    </section>
+
+    <section id="portfolio" class="container">
+      <h2>Portfolio</h2>
+      <div class="grid">
+        <article class="tile">
+          <h3>Project One</h3>
+          <p>Short description. Replace with your project details and images.</p>
+        </article>
+        <article class="tile">
+          <h3>Project Two</h3>
+          <p>Short description. Replace with your project details and images.</p>
+        </article>
+        <article class="tile">
+          <h3>Project Three</h3>
+          <p>Short description. Replace with your project details and images.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container card">
+      <h2>Contact</h2>
+      <p>Send me a message — this form doesn't submit anywhere by default. Hook it up to your backend or use a form service.</p>
+      <form id="contact-form">
+        <label>
+          Name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit">Send</button>
+        <p id="form-msg" class="muted" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Abbas · Built with ❤️</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
